@@ -82,27 +82,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //method 
+    //method
     private void showDialogMessage() {
-
+//create and Alert
         AlertDialog.Builder alertDialog  = new AlertDialog.Builder(this);
+        //set Title of the alert Message
         alertDialog.setTitle("Delete")
                 .setMessage("Do you want to Delete Text ?")
+                //Set Functionality when user press no button(Negative Button)
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                    //perform action while press NO Button
                         dialog.cancel();
 
                     }
                 })
+                //Set Functionality when user press Yes button(Positive Button)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        //perform Action while press Yes Button
                         result.setText("Text will we Deleted");
 
                     }
+                    //function for show the Dialog Box
                 }).show();
         alertDialog.create();
 
